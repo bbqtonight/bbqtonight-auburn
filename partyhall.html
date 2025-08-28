@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Party Hall - Bar B Q Tonight Auburn</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#fff;   /* White background */
+      color:#000;        /* Black text */
+    }
+
+    /* Header with wood background */
+    header {
+      background: url("images/wood.jpg") no-repeat center center;
+      background-size: cover; 
+      border-bottom:2px solid #ccc;
+    }
+
+    nav {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:15px 30px;
+    }
+    nav .logo img {height:55px;}
+    nav ul {display:flex;list-style:none;gap:20px;margin:0;padding:0;}
+    nav ul li a {
+      color:#000;
+      text-decoration:none;
+      font-weight:bold;
+      padding:8px 12px;
+      border-radius:5px;
+      position:relative;
+      transition:0.3s;
+    }
+    nav ul li a::after {
+      content:"";
+      position:absolute;
+      bottom:-4px;left:0;
+      width:0;height:2px;
+      background:#f4b400;
+      transition:0.3s;
+    }
+    nav ul li a:hover::after {width:100%;}
+    nav ul li a.active {color:#f4b400;}
+
+    /* Section */
+    section {
+      padding:60px 20px;
+      text-align:center;
+      max-width:1200px;
+      margin:40px auto;
+      background:#f9f9f9;   /* Light section background */
+      border-radius:15px;
+      box-shadow:0 0 15px rgba(0,0,0,0.1);
+    }
+    section h1, section h2 {
+      color:#d32f2f;  /* Red accent */
+      margin-bottom:20px;
+    }
+    section p {
+      font-size:1.15rem;
+      line-height:1.6;
+      color:#333;
+      max-width:900px;
+      margin:auto;
+    }
+
+    /* Gallery */
+    .hall-gallery {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+      gap:20px;
+      margin-top:30px;
+    }
+    .hall-gallery img {
+      width:100%;
+      border-radius:12px;
+      box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
+
+    /* Buttons */
+    .btn {
+      display:inline-block;
+      padding:12px 25px;
+      margin:20px 10px;
+      color:#fff;
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:8px;
+      background:linear-gradient(45deg,#f4b400,#ff0080);
+      box-shadow:0 0 10px rgba(0,0,0,0.2);
+      transition:0.3s;
+    }
+    .btn:hover {
+      transform:scale(1.05);
+      box-shadow:0 0 15px rgba(0,0,0,0.3);
+    }
+
+    /* Footer */
+    footer {
+      background:#f4f4f4;
+      color:#000;
+      text-align:center;
+      padding:25px 20px;
+      border-top:2px solid #ccc;
+    }
+    footer p {margin:0 0 10px;}
+    .social a {
+      color:#000;
+      margin:0 10px;
+      font-size:22px;
+      transition:0.3s;
+    }
+    .social a:hover {color:#d32f2f;}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo"><img src="images/logo (2).png" alt="Restaurant Logo"></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Menu & Services</a></li>
+        <li><a href="partyhall.html" class="active">Party Hall</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Party Hall Section -->
+  <section>
+    <h1>Our Party Hall</h1>
+    <p>
+      Celebrate life’s most special occasions at <strong>Bar B Q Tonight Auburn</strong>.  
+      Our beautifully designed <strong>Party Hall</strong> can accommodate up to <strong>150 guests</strong>, making it the 
+      perfect venue for <strong>birthdays, engagements, weddings, anniversaries, and corporate gatherings</strong>.  
+      With premium halal catering, excellent service, and a welcoming atmosphere, we ensure your 
+      event is unforgettable.
+    </p>
+
+    <div class="hall-gallery">
+      <img src="images/Media.jpeg" alt="Party Hall View">
+      <img src="images/Media (1).jpeg" alt="Decorated Event Hall">
+      <img src="images/Media (2).jpeg" alt="Birthday Setup">
+    </div>
+
+    <a href="tel:0403735306" class="btn"><i class="fas fa-phone"></i> Book Now</a>
+    <a href="mailto:auburnbbqtonight@gmail.com" class="btn"><i class="fas fa-envelope"></i> Send Inquiry</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Bar B Q Tonight Auburn - Halal Restaurant & Party Hall. All rights reserved.</p>
+    <div class="social">
+      <a href="https://www.instagram.com/bbqtonightauburn/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bbqtonight.auburn?_t=ZS-8zFHEZtuZbl&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/share/1DwxydgfFM/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+</body>
+</html>

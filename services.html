@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Bar B Q Tonight Auburn</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #111;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: #f4f4f4;
+      border-bottom: 2px solid #ddd;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+    }
+    nav .logo img { height: 55px; }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      position: relative;
+    }
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #f4b400;
+      transition: 0.3s;
+    }
+    nav ul li a:hover::after { width: 100%; }
+    nav ul li a.active { color: #f4b400; }
+
+    /* Section */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+    section h1 {
+      font-size: 2.5rem;
+      color: #d32f2f; /* Red heading */
+      text-shadow: 0 0 6px rgba(211, 47, 47, 0.3);
+      margin-bottom: 40px;
+    }
+
+    .service-card h3 {
+      color: #d32f2f; /* Service titles also red */
+      margin: 10px 0;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .service-card {
+      background: #fafafa;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .service-card img {
+      width: 100%;
+      height: auto;        /* ✅ keep proportion */
+      border-radius: 12px;
+      object-fit: contain; /* ✅ no cropping */
+      margin-bottom: 15px;
+      background: #fff;    /* ✅ ensures clean background */
+    }
+    .service-card p {
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      background: #f4f4f4;
+      color: #333;
+      text-align: center;
+      padding: 25px 20px;
+      border-top: 2px solid #ddd;
+    }
+    footer p { margin: 0 0 10px; }
+    .social a {
+      color: #333;
+      margin: 0 10px;
+      font-size: 22px;
+      transition: 0.3s;
+    }
+    .social a:hover {
+      color: #f4b400;
+      text-shadow: 0 0 8px #f4b400;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo"><img src="images/logo (2).png" alt="Restaurant Logo"></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="partyhall.html">Party Hall</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Services Section -->
+  <section>
+    <h1>Our Services</h1>
+    <div class="services-grid">
+      
+      <!-- Dine In -->
+      <div class="service-card">
+        <img src="images/dine-in-takeaway.webp" alt="Dine-In">
+        <h3>Dine-In 🍽️ Takeaway 🥡</h3>
+        <p>Enjoy authentic Halal cuisine in a warm, family-friendly atmosphere with freshly grilled kebabs and aromatic biryanis.</p>
+      </div>
+
+      <!-- Catering -->
+      <div class="service-card">
+        <img src="images/types-of-Catering.jpeg" alt="Catering">
+        <h3>Catering 🎉</h3>
+        <p>We prepare catering for weddings, birthdays, and corporate events. Let us handle the food while you enjoy the celebration.</p>
+      </div>
+
+      <!-- Party Hall -->
+      <div class="service-card">
+        <img src="images/Media.jpeg" alt="Party Hall">
+        <h3>Party Hall 🎊</h3>
+        <p>Host your events in our spacious party hall, perfect for up to 150 guests. Ideal for birthdays, weddings, and more.</p>
+      </div>
+
+      <!-- Delivery -->
+      <div class="service-card">
+        <img src="images/Delivery-van-icon.png" alt="Delivery">
+        <h3>Delivery 🚚</h3>
+        <p>We deliver freshly cooked halal food right to your doorstep. Delivery charges depend on your location.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Bar B Q Tonight Auburn - Halal Restaurant & Party Hall. All rights reserved.</p>
+    <div class="social">
+      <a href="https://www.instagram.com/bbqtonightauburn/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bbqtonight.auburn?_t=ZS-8zFHEZtuZbl&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/share/1DwxydgfFM/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+</body>
+</html>

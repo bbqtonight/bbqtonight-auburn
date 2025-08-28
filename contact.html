@@ -1,0 +1,315 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Bar B Q Tonight Auburn</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #000;
+    }
+
+    /* Header */
+    header {
+      background: #fff;
+      border-bottom: 2px solid #ddd;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+    }
+    nav .logo img {
+      height: 55px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      position: relative;
+      transition: 0.3s;
+    }
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #f4b400;
+      transition: 0.3s;
+    }
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+    nav ul li a.active {
+      color: #f4b400;
+    }
+
+    /* Section */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 1200px;
+      margin: 40px auto;
+      background: #fafafa;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+      section h1 {
+  font-weight: 800;
+  font-size: 2.2rem;
+  background: linear-gradient(45deg, #ff7e00, #ff0080);
+  background-clip: text;
+  -webkit-background-clip: text;  /* Needed for Chrome & Safari */
+  -webkit-text-fill-color: transparent; /* Makes gradient visible */
+  margin-bottom: 20px;
+}
+
+    section p {
+      font-size: 1.1rem;
+      color: #333;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .info-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: 0.3s ease;
+    }
+    .info-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+    .info-box i {
+      font-size: 20px;
+      color: #e63946;
+    }
+    .info-box a, 
+    .info-box span {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #e63946;
+      text-decoration: none;
+    }
+    .info-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Buttons under info */
+    .contact-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .contact-buttons a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 25px;
+      font-weight: bold;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      background: linear-gradient(45deg, #ff7e00, #ff0080);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    .contact-buttons a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+
+    /* Map Embed */
+    .map {
+      margin-top: 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .map iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+    }
+
+    /* Contact Form */
+    form {
+      margin-top: 40px;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      color: #000;
+      font-size: 1rem;
+    }
+    form input:focus,
+    form textarea:focus {
+      outline: 2px solid #f4b400;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 15px 0;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #f4b400, #ff0080);
+      box-shadow: 0 0 10px rgba(255, 0, 128, 0.3),
+        0 0 20px rgba(244, 180, 0, 0.3);
+      transition: 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 0, 128, 0.6),
+        0 0 30px rgba(244, 180, 0, 0.6);
+    }
+
+    /* Footer */
+    footer {
+      background: #fff;
+      color: #555;
+      text-align: center;
+      padding: 25px 20px;
+      border-top: 2px solid #ddd;
+    }
+    footer p {
+      margin: 0 0 10px;
+    }
+    .social a {
+      color: #555;
+      margin: 0 10px;
+      font-size: 22px;
+      transition: 0.3s;
+    }
+    .social a:hover {
+      color: #f4b400;
+      text-shadow: 0 0 6px #f4b400;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="images/logo (2).png" alt="Restaurant Logo" />
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Menu & Services</a></li>
+        <li><a href="partyhall.html">Party Hall</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h1>Contact Us</h1>
+    <p>
+      We’d love to hear from you! Whether you’re planning a party, need
+      catering, or want to reserve a table — get in touch with us today.
+    </p>
+
+    <!-- Contact Info Boxes -->
+    <div class="contact-info">
+      <div class="info-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>22A Auburn Road, Auburn NSW 2144</span>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-phone"></i>
+        <a href="tel:0403735306">0403 735 306</a>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:auburnbbqtonight@gmail.com">auburnbbqtonight@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- Gradient Buttons -->
+    <div class="contact-buttons">
+      <a href="tel:0403735306"><i class="fas fa-phone"></i> Call Us</a>
+      <a href="mailto:auburnbbqtonight@gmail.com"><i class="fas fa-envelope"></i> Send Inquiry</a>
+    </div>
+
+    <!-- Map -->
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.349990809093!2d151.0295!3d-33.8495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bb3f3d8cbbdf%3A0x3c62f42a58f6c0!2s22A%20Auburn%20Rd%2C%20Auburn%20NSW%202144%2C%20Australia!5e0!3m2!1sen!2sau!4v1700000000000"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Your Message"
+        required
+      ></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Bar B Q Tonight Auburn - Halal Restaurant & Party Hall. All rights reserved.</p>
+    <div class="social">
+      <a href="https://www.instagram.com/bbqtonightauburn/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@bbqtonight.auburn?_t=ZS-8zFHEZtuZbl&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/share/1DwxydgfFM/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
